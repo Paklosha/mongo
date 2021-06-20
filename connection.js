@@ -2,17 +2,12 @@ const { MongoClient } = require("mongodb");
 
 const data = require('./data.js');
 
-// Replace the uri string with your MongoDB deployment's connection string.
 const uri = "mongodb://127.0.0.1:27017"
-   // "mongodb+srv://Paklosha:135791@mycluster.xjmbs.mongodb.net/test?retryWrites=true&w=majority";
-
-
 
 async function run() {
     const client = new MongoClient(uri, { useUnifiedTopology: true });
     try {
         await client.connect();
-
         const database = client.db("test");
         const firstCollection = database.collection("firstCollection");
         const secondCollection = database.collection("secondCollection");
