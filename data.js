@@ -767,6 +767,5 @@ const secondData = [
     { country: 'Avon', "overallStudents": 8888 },
     { country: 'Cambridgeshire', "overallStudents": 333 }
 ];
-module.exports = {firstData, secondData}
 module.exports.firstData = firstData;
 module.exports.secondData = secondData;
